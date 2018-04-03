@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+#set -e # chown may fail on readonly mounts
 
 if [[ "$@" == 'eswrapper' ]]; then
         find /usr/share/elasticsearch/config -type f -exec chmod 600 {} ';' &> /dev/null
